@@ -1,0 +1,22 @@
+torchrun --nnodes 1 --nproc_per_node 2 stage1.py \
+    --deepspeed ds_zero2_no_offload.json \
+    --model_name_or_path ./output/qwenvl_qwen500m/stage2 \
+    --train_type freeze_vision \
+    --data_path /mnt_llm/tiandiyiti/hsl/llava_data/stage3 \
+    --remove_unused_columns false \
+    --bf16 true \
+    --fp16 false \
+    --dataloader_pin_memory True \
+    --dataloader_num_workers 10 \
+    --dataloader_persistent_workers True \
+    --output_dir ./output/qwenvl_qwen500m/stage3 \
+    --num_train_epochs 1 \
+    --per_device_train_batch_size 6 \
+    --per_device_eval_batch_size 1 \
+    --gradient_accumulation_steps 8 \
+    --evaluation_strategy "no" \
+    --save_strategy "epoch" \
+    --save_total_limit 1 \
+    --report_to "tensorboard" \
+    --learning_rate 2e-5 \
+    --logging_steps 10
