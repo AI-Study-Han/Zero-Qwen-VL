@@ -18,9 +18,9 @@ pip install deepspeed -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip install tensorboard  
 
 ## 二、训练数据和模型权重
-训练分成3个阶段，只是数据和冻结的部分不同。stage1和stage2的数据用的是[Chinese-LLaVA-Vision-Instructions](https://huggingface.co/datasets/LinkSoul/Chinese-LLaVA-Vision-Instructions/tree/main)中的LLaVA-CC3M-Pretrain-595K和LLaVA-Instruct-150K。stage3是对TextOCR-GPT4o和ShareGPT-4o翻译后的数据（后面会放上来，只是进行了翻译，并没有对翻译结果进行清洗）。  
+训练分成3个阶段，只是数据和冻结的部分不同。stage1和stage2的数据用的是[Chinese-LLaVA-Vision-Instructions](https://huggingface.co/datasets/LinkSoul/Chinese-LLaVA-Vision-Instructions/tree/main)中的LLaVA-CC3M-Pretrain-595K和LLaVA-Instruct-150K。stage3是对TextOCR-GPT4o和ShareGPT-4o翻译后的数据，数据放在这里了：[Chinese_Llava_Data](https://huggingface.co/datasets/My521/Chinese_Llava_Data/tree/main)。  
 
-三个阶段的模型权重后面也会放上来（网速问题可能不会很快）。  
+三个阶段的模型权重在这里：[Zero-Qwen-VL](https://huggingface.co/My521/Zero-Qwen-VL)。  
 
 要求训练数据的格式为
 
